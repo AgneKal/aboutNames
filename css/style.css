@@ -1,0 +1,90 @@
+body,
+body * {
+    margin:0;
+    padding:0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mainContainer {
+    background-color: #FFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#nameValue {
+    width: 300px;
+    padding: 8px 16px;
+    border: none;
+    border-bottom: 1px solid #ed889c;
+    font-size: 24px;
+    color: #ed889c;
+    background-color: #FFEFEF;
+
+}
+
+#nameValue::placeholder {
+    color: #ed889c;
+    font-size: 24px;
+}
+
+#nameValue:focus {
+    border-bottom: 2px solid #ed889c;
+    background-color: #FFEFEF;
+    outline: #ed889c;
+}
+
+#submit {
+    margin-top: 20px;
+    background-color: #ed889c;
+    color: #FFEFEF;
+    border: 2px solid #FFEFEF;
+    border-radius: 15px;
+    padding: 16px 32px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #FFEFEF;
+    color: #ed889c;
+    border: 2px solid #ed889c;
+}
+
+.flag {
+    width: 70px;
+    padding-bottom: 15px;
+}
+
+#uList {
+    padding: 10px 0;
+}
+
+#innerUList {
+    padding: 10px 0;
+}
+
+.listItem {
+    list-style: none;
+    color: #ed889c;
+    line-height: 1.5;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.innerUListItem {
+    padding-left: 20px;
+    list-style: none;
+    color: #ed889c;
+    font-size: 22px;
+    line-height: 2;
+    font-weight: 400;
+}

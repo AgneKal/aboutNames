@@ -10,9 +10,10 @@ const getInfo = () => {
         .then((data) => {
         uList.innerHTML = '';
         const li = document.createElement('li');
-        li.innerHTML = `${data.name}, ${data.count}`;
+        li.innerHTML = `Vardas: ${data.name}, priskaičiuota: ${data.count}, vardo kilmės tikimybė (5 didž.):`;
         uList.appendChild(li);
         const ul = document.createElement('ul');
+        li.className = 'listItem';
         li.appendChild(ul);
         data.country.forEach((c) => {
             const innerLi = document.createElement('li');
@@ -21,7 +22,8 @@ const getInfo = () => {
                 return response.json();
             })
                 .then((data) => {
-                innerLi.innerHTML = `${data[0].name.common}, ${c.probability}`;
+                innerLi.innerHTML = `<img class="flag" src="${data[0].flags.png}" alt=""> ${data[0].name.common}, ${(c.probability).toFixed(3)}`;
+                innerLi.className = 'innerUListItem';
                 ul.appendChild(innerLi);
             });
         });

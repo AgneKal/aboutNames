@@ -14,7 +14,7 @@ const getInfo = () => {
     .then ((data: Name) => {
         uList.innerHTML = '';
         const li = document.createElement('li');
-        li.innerHTML = `Vardas: ${data.name}, priskaičiuota: ${data.count}, vardo kilmės tikimybė (5 didž.):`
+        li.innerHTML = `Vardas ir (ar) pavardė: ${data.name}, priskaičiuota: ${data.count}, vardo kilmės tikimybė (5 didž.):`
         uList.appendChild(li);
         const ul = document.createElement('ul');
         li.className = 'listItem';

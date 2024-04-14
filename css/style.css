@@ -17,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 #nameValue {
@@ -78,6 +79,7 @@ body {
     line-height: 1.5;
     font-size: 24px;
     font-weight: 700;
+    padding-bottom: 20px;
 }
 
 .innerUListItem {

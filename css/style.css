@@ -4,11 +4,12 @@ body * {
     padding:0;
     vertical-align: top;
     box-sizing: border-box;
-    background-attachment: fixed;
+
 }
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-attachment: fixed;
 }
 
 .mainContainer {

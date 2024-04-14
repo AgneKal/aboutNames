@@ -28,7 +28,6 @@ body {
     font-size: 24px;
     color: #ed889c;
     background-color: #FFEFEF;
-
 }
 
 #nameValue::placeholder {
@@ -70,7 +69,7 @@ body {
 }
 
 #innerUList {
-    padding: 10px 0;
+    padding: 50px 0;
 }
 
 .listItem {
@@ -79,7 +78,10 @@ body {
     line-height: 1.5;
     font-size: 24px;
     font-weight: 700;
-    padding-bottom: 20px;
+}
+
+.listItem ul {
+    padding-top: 20px;
 }
 
 .innerUListItem {

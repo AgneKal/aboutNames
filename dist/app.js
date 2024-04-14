@@ -3,6 +3,14 @@ const btn = document.getElementById('submit');
 const uList = document.getElementById('uList');
 const getInfo = () => {
     const nameV = nameInput.value;
+    if (nameV === '') {
+        uList.innerHTML = '';
+        const li = document.createElement('li');
+        li.className = 'listItem';
+        li.innerHTML = `Įrašykite vardą!`;
+        uList.appendChild(li);
+        return;
+    }
     fetch(`https://api.nationalize.io/?name=${nameV}`)
         .then((response) => {
         return response.json();

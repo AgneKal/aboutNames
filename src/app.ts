@@ -6,7 +6,15 @@ const btn = <HTMLButtonElement>document.getElementById('submit');
 const uList = <HTMLUListElement>document.getElementById('uList')!;
 
 const getInfo = () => {
-    const nameV = nameInput.value
+    const nameV = nameInput.value;
+    if (nameV === '') {
+        uList.innerHTML = '';
+        const li = document.createElement('li');
+        li.className = 'listItem';
+        li.innerHTML = `Įrašykite vardą!`;
+        uList.appendChild(li);
+        return;
+    }
     fetch(`https://api.nationalize.io/?name=${nameV}`)
     .then ((response) => {
         return response.json();
@@ -14,7 +22,7 @@ const getInfo = () => {
     .then ((data: Name) => {
         uList.innerHTML = '';
         const li = document.createElement('li');
-        li.innerHTML = `Vardas ir (ar) pavardė: ${data.name}, priskaičiuota: ${data.count}, vardo kilmės tikimybė (5 didž.):`
+        li.innerHTML = `Vardas ir (ar) pavardė: ${data.name}, priskaičiuota: ${data.count}, vardo kilmės tikimybė (5 didž.):`;
         uList.appendChild(li);
         const ul = document.createElement('ul');
         li.className = 'listItem';

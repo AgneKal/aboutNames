@@ -4,7 +4,6 @@ body * {
     padding:0;
     vertical-align: top;
     box-sizing: border-box;
-
 }
 
 body {
@@ -17,7 +16,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     flex-direction: column;
 }
 
